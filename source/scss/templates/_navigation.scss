@@ -541,7 +541,10 @@ ul.navbar-nav>li>a {
 
 .site-navigation .container,
 .search-area {
-  position: relative;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .search-area {
@@ -558,6 +561,25 @@ ul.navbar-nav>li>a {
   @include desktop {
     top: 17px;
   }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 
