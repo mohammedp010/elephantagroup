@@ -950,9 +950,17 @@
   align-content: center;
 }
 
+// .clients-logo img {
+//   filter: grayscale(100%);
+//   filter: gray;
+// }
+
 .clients-logo img {
-  filter: grayscale(100%);
-  filter: gray;
+  max-width: 100%;
+  height: auto;
+  width: 100px; /* Set a consistent width */
+  height: 100px; /* Set a consistent height */
+  object-fit: contain; /* Ensure the logo fits within the dimensions without distortion */
 }
 
 /* Testimonial
