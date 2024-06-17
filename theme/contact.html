@@ -405,7 +405,12 @@ FACEBOOK: https://www.facebook.com/themefisher
               <h3 class="column-title">We love to hear</h3>
               <!-- contact form works with formspree.io  -->
               <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
-              <form id="contact-form" action="#" method="post" role="form">
+              <form
+                id="contact-form"
+                action="sendmail.php"
+                method="post"
+                role="form"
+              >
                 <div class="error-container"></div>
                 <div class="row">
                   <div class="col-md-4">
@@ -564,7 +569,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
         <div class="copyright">
           <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center">
               <div class="col-md-6">
                 <div class="copyright-info">
                   <span
@@ -573,37 +578,27 @@ FACEBOOK: https://www.facebook.com/themefisher
                       document.write(new Date().getFullYear());
                     </script>
                     , Designed &amp; Developed by
-                    <a href="https://themefisher.com">Themefisher</a></span
+                    <a href="https://www.linkedin.com/in/mohammedp-sd/"
+                      >MakeWithMrx</a
+                    ></span
                   >
                 </div>
               </div>
+              <!-- Row end -->
 
-              <div class="col-md-6">
-                <div class="footer-menu text-center text-md-right">
-                  <ul class="list-unstyled">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="team.html">Our people</a></li>
-                    <li><a href="faq.html">Faq</a></li>
-                    <li><a href="news-left-sidebar.html">Blog</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                  </ul>
-                </div>
+              <div
+                id="back-to-top"
+                data-spy="affix"
+                data-offset-top="10"
+                class="back-to-top position-fixed"
+              >
+                <button class="btn btn-primary" title="Back to Top">
+                  <i class="fa fa-angle-double-up"></i>
+                </button>
               </div>
             </div>
-            <!-- Row end -->
-
-            <div
-              id="back-to-top"
-              data-spy="affix"
-              data-offset-top="10"
-              class="back-to-top position-fixed"
-            >
-              <button class="btn btn-primary" title="Back to Top">
-                <i class="fa fa-angle-double-up"></i>
-              </button>
-            </div>
+            <!-- Container end -->
           </div>
-          <!-- Container end -->
         </div>
         <!-- Copyright end -->
       </footer>
