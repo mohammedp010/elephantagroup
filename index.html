@@ -58,8 +58,87 @@ FACEBOOK: https://www.facebook.com/themefisher
     <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
     <!-- Colorbox -->
     <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
     <!-- Template styles-->
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .slick-prev,
+      .slick-next {
+        background-color: #000; /* Black background */
+        color: #fff; /* White arrow */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        border-radius: 50%; /* Circular button */
+        width: 40px; /* Adjust width as needed */
+        height: 40px; /* Adjust height as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slick-prev::before,
+      .slick-next::before {
+        font-family: "slick";
+        font-size: 20px;
+        line-height: 1;
+        opacity: 0.75;
+        color: white;
+      }
+
+      .slick-prev::before {
+        content: "←"; /* Left arrow */
+      }
+
+      .slick-next::before {
+        content: "→"; /* Right arrow */
+      }
+
+      .slick-prev:hover,
+      .slick-next:hover {
+        background-color: #555; /* Darker background on hover */
+      }
+
+      .all-clients-slider {
+        position: relative;
+        padding: 0 60px; /* Adjust this value to make space for buttons */
+      }
+
+      .container {
+        overflow: visible;
+      }
+
+      @media (max-width: 600px) {
+        .slick-prev,
+        .slick-next {
+          display: none; /* Hide buttons on mobile view */
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="body-inner">
@@ -141,7 +220,9 @@ FACEBOOK: https://www.facebook.com/themefisher
                       <div class="info-box">
                         <div class="info-box-content">
                           <p class="info-box-title">Call Us</p>
-                          <p class="info-box-subtitle">(+91) 98795-93339, (+91) 96383-25676</p>
+                          <p class="info-box-subtitle">
+                            (+91) 98795-93339, (+91) 96383-25676
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -1545,7 +1626,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           <div class="row">
             <div class="col-lg-12">
               <h3 class="column-title">Happy Clients</h3>
-              <div class="row all-clients">
+              <div class="all-clients-slider">
                 <div class="col-md-3 col-sm-3 col-6">
                   <figure class="clients-logo">
                     <a href="#!"
@@ -2228,6 +2309,52 @@ FACEBOOK: https://www.facebook.com/themefisher
             this.style.display = "none";
           });
       </script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $(".all-clients-slider").slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true,
+                },
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  arrows: false /* Disable arrows on mobile view */,
+                  draggable: true /* Enable dragging on mobile view */,
+                  swipe: true /* Enable swipe on mobile view */,
+                },
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows: false /* Disable arrows on mobile view */,
+                  draggable: true /* Enable dragging on mobile view */,
+                  swipe: true /* Enable swipe on mobile view */,
+                },
+              },
+            ],
+          });
+        });
+      </script>
+
       <!-- initialize jQuery Library -->
       <script src="plugins/jQuery/jquery.min.js"></script>
       <!-- Bootstrap jQuery -->
