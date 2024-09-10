@@ -83,6 +83,39 @@ FACEBOOK: https://www.facebook.com/themefisher
       .table-title {
         margin-top: 20px;
       }
+
+      /* Basic styling for the cards */
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .card {
+          margin-bottom: 20px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -90,8 +123,8 @@ FACEBOOK: https://www.facebook.com/themefisher
       <div id="top-bar" class="top-bar">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 col-md-8">
-              <ul class="top-info text-center text-md-left">
+            <div class="col-lg-12 col-md-12">
+              <ul class="top-info text-center">
                 <li>
                   <i class="fas fa-map-marker-alt"></i>
                   <p class="info-text">Killa Pardi, Gujarat - IN - 396125</p>
@@ -100,7 +133,7 @@ FACEBOOK: https://www.facebook.com/themefisher
             </div>
             <!--/ Top info end -->
 
-            <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+            <!-- <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
               <ul class="list-unstyled">
                 <li>
                   <a
@@ -131,7 +164,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> -->
             <!--/ Top social end -->
           </div>
           <!--/ Content row end -->
@@ -225,7 +258,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
                   <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav mr-auto">
-                      <li class="nav-item dropdown active">
+                      <li class="nav-item dropdown">
                         <a href="index.html" class="nav-link dropdown-toggle"
                           >Home</a
                         >
@@ -235,20 +268,14 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </ul> -->
                       </li>
 
-                      <li class="nav-item dropdown">
-                        <a
-                          href="#"
-                          class="nav-link dropdown-toggle"
-                          data-toggle="dropdown"
-                          >Company <i class="fa fa-angle-down"></i
-                        ></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="about.html">About Us</a></li>
-                          <!-- <li><a href="team.html">Our People</a></li> -->
-                          <!-- <li><a href="testimonials.html">Testimonials</a></li> -->
-                          <!-- <li><a href="faq.html">Faq</a></li> -->
-                          <!-- <li><a href="pricing.html">Pricing</a></li> -->
-                        </ul>
+                      <li class="nav-item dropdown active">
+                        <a href="about.html" class="nav-link dropdown-toggle"
+                          >About us</a
+                        >
+                        <!-- <ul class="dropdown-menu" role="menu">
+                          <li><a href="projects.html">Projects All</a></li>
+                          <li><a href="projects-single.html">Projects Single</a></li>
+                        </ul> -->
                       </li>
 
                       <li class="nav-item dropdown">
@@ -337,7 +364,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">company</a></li>
+                      <!-- <li class="breadcrumb-item"><a href="#">company</a></li> -->
                       <li class="breadcrumb-item active" aria-current="page">
                         About Us
                       </li>
@@ -357,25 +384,8 @@ FACEBOOK: https://www.facebook.com/themefisher
 
       <section id="main-container" class="main-container">
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-lg-6">
-              <h3 class="column-title">Who We Are</h3>
-              <p>
-                Elephanta, founded 17 years ago, has grown from humble
-                beginnings to a significant player in the construction industry.
-                We collaborate with C-Cube Construction, HCP Innovation, and DnP
-                Innovation, providing services for factory buildings,
-                residential projects, roads, treatment plants, and pipelines.
-                Our vision is to be a reliable industry partner, delivering
-                modern construction with integrity, quality, and speed. We
-                proudly serve clients like Alok Industries Ltd, Welspun Terry
-                Towel India Ltd, GHCL, and Raymond Limited, while also focusing
-                on local residential needs and effluent treatment plants.
-              </p>
-            </div>
-            <!-- Col end -->
-
-            <div class="col-lg-6 mt-5 mt-lg-0">
               <div id="page-slider" class="page-slider small-bg">
                 <div
                   class="item"
@@ -407,7 +417,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </div>
                   </div>
                 </div>
-                <!-- Item 1 end -->
+                <!-- Item 2 end -->
 
                 <div
                   class="item"
@@ -423,16 +433,70 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </div>
                   </div>
                 </div>
-                <!-- Item 1 end -->
+                <!-- Item 3 end -->
               </div>
               <!-- Page slider end-->
             </div>
             <!-- Col end -->
           </div>
-          <!-- Content row end -->
+          <!-- Row end -->
+
+          <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Who We Are</h3>
+                  <p class="card-text">
+                    We are a dynamic and forward-thinking construction company
+                    dedicated to delivering excellence in every project. With a
+                    rich history of innovation and a commitment to quality, we
+                    have established ourselves as a leader in the industry. Our
+                    team of skilled professionals works tirelessly to ensure
+                    that every project is completed to the highest standards, on
+                    time, and within budget.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Col end -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Our Vision</h3>
+                  <p class="card-text">
+                    We envision ourselves as a trusted and reliable partner in
+                    the industry, committed to fostering a construction culture
+                    that embraces modern methodologies. Our core values of
+                    integrity, reliability, quality, and timely delivery drive
+                    us to exceed expectations and build lasting relationships.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Col end -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Our Mission</h3>
+                  <p class="card-text">
+                    Our mission is to deliver exceptional construction services
+                    that meet the highest standards of quality and safety. We
+                    aim to innovate continuously, leveraging cutting-edge
+                    technology and sustainable practices to create value for our
+                    clients and communities.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Col end -->
+          </div>
+          <!-- Row end -->
         </div>
         <!-- Container end -->
       </section>
+
       <!-- Main container end -->
 
       <section id="facts" class="facts-area dark-bg">

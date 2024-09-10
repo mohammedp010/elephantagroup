@@ -595,7 +595,6 @@ ul.top-info li {
   line-height: 10px;
   display: inline-block;
   margin-left: 0;
-  padding-right: 15px;
 }
 
 ul.top-info li i {
@@ -617,7 +616,6 @@ ul.top-info li p.info-text {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-right: -12px;
 }
 @media (max-width: 767px) {
   .top-social ul {
@@ -1887,12 +1885,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   width: 100%;
   border-bottom: 3px solid #ffb600;
 }
-
-.hidden-project {
-  display: none;
-}
-
-
 .shuffle-btn-group label {
   display: inline-block;
   color: #212121;
